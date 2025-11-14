@@ -1,4 +1,4 @@
-from dataset.slimpj_dataset import get_slimpajama_6b
+
 import numpy as np
 import torch
 import tqdm
@@ -10,8 +10,10 @@ from transformers import GPTNeoXForCausalLM, AutoTokenizer
 from torch.utils.data import Dataset,IterableDataset,DataLoader
 from torch.optim import AdamW
 import matplotlib.pyplot as plt
-from torch.utils.tensorboard import SummaryWriter
-from datautil import get_data
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from tool.datautil import get_data
 from multi_thread_kmeans import kmeans_threading
 import json
 load1,load2=get_data(data_path="../data/slimpajama")

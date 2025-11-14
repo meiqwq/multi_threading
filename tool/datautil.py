@@ -11,7 +11,7 @@ from torch.utils.data import Dataset,IterableDataset,DataLoader
 from torch.optim import AdamW
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
-from torch.utils.tensorboard import SummaryWriter
+
 
 
 class Pre_Data(Dataset):
